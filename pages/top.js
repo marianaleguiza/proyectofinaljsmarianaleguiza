@@ -103,9 +103,11 @@ function calculate(cartItems) {
     });
 
     const totalWithoutIvaInfo = document.createElement("p");
-    totalWithoutIvaInfo.textContent = `Suma total: ARS$${totalWithoutIva}`;
+    totalWithoutIvaInfo.textContent = `Suma total sin IVA: ARS$${totalWithoutIva}`;
     cartSummaryDiv.appendChild(totalWithoutIvaInfo);
-    
+    const subtotalInfo = document.createElement("p");
+    subtotalInfo.textContent = `La suma total con iva incluido y descuentos ARS$${subtotal}.`;
+    cartSummaryDiv.appendChild(subtotalInfo);
 }
 const openCartButton = document.querySelector(".open-cart-button");
 const cartContainer = document.querySelector(".cart-container");
