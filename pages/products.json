@@ -1,0 +1,60 @@
+[{
+    "id": 1,
+    "title": "Look me in the eye",
+    "price": 10000,
+    "thumbnailUrl": "../img/gallery1.jpg"
+},
+{
+    "id": 2,
+    "title": "Rainbow",
+    "price": 5000,
+    "thumbnailUrl": "../img/gallery2.jpg"
+},
+
+{
+    "id": 3,
+    "title": "Red Lady",
+    "price": 25000,
+    "thumbnailUrl": "../img/gallery3.png"
+
+},
+{
+    "id": 4,
+    "title": "Colorful",
+    "price": 15000,
+    "thumbnailUrl": "../img/gallery4.jpg"
+},
+{
+    "id": 5,
+    "title": "Flamingo",
+    "price": 2000,
+    "thumbnailUrl": "../img/gallery5.jpg"
+},
+
+{
+    "id": 6,
+    "title": "Abstract Flowers",
+    "price": 3500,
+    "thumbnailUrl": "../img/gallery6.jpg"
+},
+{
+    "id": 7,
+    "title": "Good Vibes Only",
+    "price": 3500,
+    "thumbnailUrl": "../img/gallery7.jpg"
+},
+
+{
+    "id": 8,
+    "title": "Relaxed",
+    "price": 6000,
+    "thumbnailUrl": "../img/gallery8.jpg"
+},
+
+{
+    "id": 9,
+    "title": "Candy Horse",
+    "price": 10000,
+    "thumbnailUrl": "../img/gallery9.jpg"
+}
+]

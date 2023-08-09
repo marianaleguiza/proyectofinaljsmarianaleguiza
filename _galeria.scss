@@ -1,0 +1,142 @@
+section {
+    border: double  $color00;
+    @include background-gradient2;
+    
+    
+    & h1{
+        text-align: center;
+        font-family: $font1;
+        color: $color3;
+        font-weight: bolder;
+    }
+    & a ,h4{
+        font-family: $font1;
+        font-weight: bold;
+        text-align: center;
+        color: $color1;
+
+        &:hover{
+            color: $color6;
+        }
+    }
+    & p{
+
+        font-family: $font2;
+        margin: 5px;
+        padding: 5px;
+
+    }
+    & button {
+        background-color: $color1;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color3;
+        }
+    }
+
+    & .grid-gallery {
+        height: auto;
+        width: 100%;
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 500px 500px 500px;
+        grid-template-areas:
+            "img1 img2 img3"
+            "img4 img5 img6"
+            "img7 img8 img9";
+        margin: 10px;
+        padding-bottom: 50px;;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 767px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "img1"
+                "img2"
+                "img3"
+                "img4"
+                "img5"
+                "img6"
+                "img7"
+                "img8"
+                "img9";
+            }
+        
+                
+        @media only screen and (min-width: 767px) and (max-width: 1300px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 500px 500px 500px;
+            grid-template-areas:
+                "img1 img2"
+                "img3 img4"
+                "img5 img6"
+                "img7 img8"
+                "img9 img9";
+        }
+    }
+
+    & .img1 {
+        height: 90%;
+        width: 85%;
+        padding: 15px;
+
+    }
+    & .img2 {
+        height: 90%;
+        width: 85%;
+        padding: 15px;
+
+    }
+    & .img3 {
+        height: 90%;
+        width: 85%;
+        padding: 15px;
+
+    }
+    & .img4 {
+        height: 90%;
+        width: 85%;
+        padding: 15px;
+    }
+    & .img5 {
+        height: 90%;
+        width: 85%;
+        padding: 15px;
+
+    }
+    & .img6 {
+        height: 90%;
+        width: 85%;
+        padding: 15px;
+    }
+    & .img7 {
+        height: 90%;
+        width: 85%;
+        padding: 20px;
+    }
+    & .img8 {
+        height: 90%;
+        width: 85%;
+        padding: 20px;
+    }
+    & .img9 {
+        height: 90%;
+        width: 85%;
+        padding: 20px;
+    }
+    
+
+
+.grid-gallery2{
+    
+    @extend .grid-gallery
+}
+}

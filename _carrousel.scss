@@ -1,0 +1,42 @@
+@media screen and (max-width: 1000px) {
+    main{
+        flex-wrap: wrap;
+
+    }
+    .animacion{
+        height: 100px;
+        width: 125px;
+        background-color: $color1;
+        text-align: center;
+        line-height: 80px;
+        font-size: 15px;
+        color: white;
+        animation-name: circulo;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+        @keyframes circulo{
+            0%{
+                border-radius: 5px;
+                opacity: 1;
+            }
+            50%{
+                border-radius: 50px;
+                transform: translateX(200px);
+                opacity: 1;
+            }
+
+
+        }
+    }
+    .carousel-inner {
+                    .carousel-item {
+                            img{
+                                padding-left: 100px;
+                                width: 370px;
+                                height: 500px;
+                        }
+}
+
+    }
+}
