@@ -1,3 +1,33 @@
+Swal.fire({
+    title: 'Login Form',
+    html: `
+      <input type="text" id="login" class="swal2-input" placeholder="Username">
+      <input type="password" id="password" class="swal2-input" placeholder="Password">
+    `,
+    confirmButtonText: 'Log In',
+    focusConfirm: false,
+    preConfirm: () => {
+        const login = Swal.getPopup().querySelector('#login').value;
+        const password = Swal.getPopup().querySelector('#password').value;
+        if (!login || !password) {
+            Swal.showValidationMessage(`Please enter login and password`);
+        }
+        return {
+            login: login,
+            password: password
+        };
+    }
+}).then((result) => {
+    Swal.fire({
+        title: 'You are logged in', // Mensaje de confirmación
+        text: `Login: ${result.value.login}`,
+        icon: 'success'
+    });
+});
+
+
+
+
 const fetchData = async () => {
     try {
         const response = await fetch('products.json');
@@ -50,7 +80,9 @@ function addToCart(id) {
     const selectedProduct = products.find(prod => prod.id == id);
 
     if (selectedProduct) {
-        const clonedProduct = { ...selectedProduct }; 
+        const clonedProduct = {
+            ...selectedProduct
+        };
         cartItems.push(clonedProduct);
         displayCart();
         localStorage.setItem("cart", JSON.stringify(cartItems));
@@ -119,15 +151,8 @@ openCartButton.addEventListener("click", () => {
 const emptyCartButton = document.querySelector(".empty-cart-button");
 
 emptyCartButton.addEventListener("click", () => {
-    cartItems = []; 
-    displayCart(); 
+    cartItems = [];
+    displayCart();
     localStorage.removeItem("cart");
-    calculate(cartItems); 
+    calculate(cartItems);
 });
-
-
-
-
-
-
-
